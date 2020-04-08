@@ -1,0 +1,231 @@
+<!DOCTYPE html> <!--opening of the html which its name usucally is !DOCTYPE-->
+<html> <!--opening of the html-->
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+ 
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+ 
+ 
+Authors in chronological order of contribution:
+Author 1 : Dr.Riedel
+Author 2 :Hadis Askari
+ 
+Further Information:
+http://diystream.cns.utexas.edu/
+Research instructor:
+Timothy Riedel
+triedel@utexas.edu
+Research educator:
+Hadis Askari
+ 
+Brief Description of Goal of Code:
+goal of the code is that to make an servey in which users can know their probalility of having cold, flu, coronovirus, allergy based on theie response to the questions.
+ 
+Known Issues: 
+the issue is how we can distinguish beteween cold, flu, coronovirus, allergy. since these four diseases have a lot in common, it will make it
+challenging that the person has coronovirus. Therefore, i provided these quetions to distinguish.
+
+   <head>  <!-- this will be the container of the meta data, CSS, etc-->
+      
+      <title>Hello World</title>   <!-- this the title of the website which will be hello world-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">   <!--meta will subscribe the data-->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">     <!--css will determine how our website will look like and it shapw its style. for example 
+font, color, size, margin,etc. -->
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head>   <!--closing of the head-->
+	   
+<script> // start of java script//
+        var cold_count = 0;  //defining varailbles//
+        var flu_count = 0; //defining variable for dehydration//
+        var coronovirus_count=0;
+        var allergy_count=0;
+
+        function coldAdd(){
+            cold_count = cold_count + 1;     //this function add the number of each variable such as cold and it is adding by one each time//
+		alert(cold_count);
+
+        }
+
+        function fluAdd(){
+            flu_count = flu_count + 1;  //this function add the number of each variable such as cold and it is adding by one each time//
+        }
+	
+       function allergyAdd(){
+            allergy_count = allergy_count + 1;     //this function add the number of each variable such as cold and it is adding by one each time//
+		alert(allergy_count);
+      
+        }
+      
+       function CoronovirusAdd(){
+           coronovirus_count = coronovirus_count + 1;     //this function add the number of each variable such as cold and it is adding by one each time//
+		alert(coronovirus_count);
+    
+        }
+      
+	
+  </script>    <!-- end of java script to define variables and functions-->
+
+
+
+<style>      /*style opened to shape the website and how it will look like such as margin, width, height,etc*/	  
+.body {
+     margin: 0em;  
+}
+
+.page {
+    width: 100vw;          /*this is defined the format and shape of the page*/
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%); /* this is the satuaration of the color*/
+}
+ 	/*this part of the html will contain CSS and it can entail multiple elements, here in the style we defined the 
+	 properties such as how the website will look like including background color, left or right, position, margin
+	 in order to shape the website*/
+  .page:target {     
+    left: 0vw;
+    z-index: 1;
+}
+   img, object{      
+    max-height:90%;
+    max-width:90%;
+}    /*this code will make the picture resizable in any device and define the propotion which max hight is ninty 
+	   and max width is ninty*/
+	/*end of style page which basically shape the format and how the website will appeare*/
+</style>   <!--close of style-->    
+<body>    <!-- this is the body of ourwebsite which we can include the paragraph, header, articles etc-->
+<div id="header" class="w3-container w3-flat-carrot"> <!--this div is to divide a page in the introduction page-->
+	<h1>Anemia or Dehydration?</h1> <!--adding header of anemia or dehyfration on the-->
+</div>   <!--close of the divison page-->
+	
+<div id="content" class="w3-container">  <!--this diviosn is the introduction page which we put the name for this id-->
+	<p>Are you feeling like you might have a dehydration but wonder if it is anemia. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--href is a source that we refer to which in this case is w3-btn w3-grey-->
+	<center><img src="img.jpg" alt=" Red Blood Cell"/></center> <!-- center will place the picture in the center of the website, and I called this picture red blood cell and then I closed it-->
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<!-- this element is a paragraph which will be appeared on the intriduction page-->
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>  
+	<!--the statment above also will appear on the website since it is in the paragraph element-->
+
+<div class="page" id="one"> <!--starting page one-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1> Question1 </h1> <!-- showing quetion 1 on the header-->
+		
+	</div> <!--closing it-->
+	
+    	<div id="content" class="w3-container">
+        <p> Do you dry mouth and tick mucus?  </p>  <!-- the question that will appear fisrt on the survey-->  
+    	</div> <!--closing it-->
+	<a href="#two"  onclick="anemiaAdd();" class="w3-btn w3-black"> No</a> <!-- creating a button for the first page, yes is indicator of anemia-->
+        <a href="#two"  onclick="dehydrationAdd();" class="w3-btn w3-black">Yes</a> <!-- creating a button for the first page, No is indicator of dehydration-->
+	
+	<!-- div is indicator of the division of pages and I defined each page by number through out the code. for example putting id as one or two or etc.
+the last two lines defines the buttons it will display on the screen, such as yes or no.
+each button is the indicator of the anmemia or dehydration which we define on the href code above-->
+</div>
+
+<div class="page" id="two">   <!-- new divison that we will define the header in the next line-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1> Question2 </h1> <!--this is a header-->
+	</div>  <!--close of the division which is basically the top portion of each page-->
+	
+    	<div id="content" class="w3-container">
+        <p> Do have a feeling of burning tongue? </p>   <!-- this is the paragraoh element and it will display on the page--> 
+    	</div> <!--end of page division-->
+	<a href="#three"  onclick="dehydrationAdd();" class="w3-btn w3-black"> No</a>
+        <a href="#three"  onclick="anemiaAdd();" class="w3-btn w3-black">Yes</a>
+</div>   <!--closing the divison page-->
+	
+<div class="page" id="three"> <!-- new divison that we will define the header in the next line-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1> Question 3 </h1> <!--this is a header-->
+	</div> <!--closing the division which is the new page and we named it page 3-->
+	
+	<div id="content" class="w3-container"
+	     <p> Do you have a rapid heard rate? <p> <!-- the question that will display on page 3-->
+	</div>
+	<a href="#four"  onclick="dehyrationAdd();" class="w3-btn w3-black"> No</a> <!-- create. button so that if you have a symptomes you can click yes-->
+        <a href="#four"  onclick="anemiaAdd();" class="w3-btn w3-black">Yes</a> <!-- create. button so that if you dont have a symptomes you can click NO-->	
+</div>
+
+<div class="page" id="four">   <!--opening the division which is the new page and we named it page 4-->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- opens the divsion page-->
+		<h1>Question 4</h1> <!--this is a header-->
+	</div> <!--closing the division which is the new page and we named it page 4-->
+	
+	<div id="content" class="w3-container">
+	     <!--this division will create a space in which we can type our question-->
+	     <p> Do feel sleepy during the day? <p> <!-- showes the question on the page four-->
+	</div>
+	<a href="#five"  onclick="dehydrationAdd();" class="w3-btn w3-black"> Yes</a> <!-- create button so if the user have the symptomes there will be click yes-->
+        <a href="#five"  onclick="AnemiaAdd();" class="w3-btn w3-black">No</a> <!--create a button so that if you do not have a symptomes you will click NO-->
+	
+</div> <!--close page four-->
+
+<div class="page" id="five"> <!--starts page five-->
+	<div id="header" class="w3-container w3-flat-carrot">   <!--this is the header that will show up on page 5-->
+		<h1>Question 5</h1> <!-- this is the header-->
+	</div> <!--closing of page 5-->
+	
+	<div id="content" class="w3-container">                 <!--this division will create a space in which we can type our question-->
+	     <p> Do you feel ringing in the ears?<p> <!-- showes the question on page five-->
+	</div>
+	<a href="#six"  onclick="dehydrationAdd();" class="w3-btn w3-black"> No</a> <!-- provide a button for the page seven to click No if you dont have the symptomes-->
+	<a href="#six"  onclick="AnemiaAdd();" class="w3-btn w3-black">Yes</a> <!-- provide a button for the page seven to click yes if you have the symptomes-->
+	</div>
+
+<div class="page" id="six">  
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1> <!-- showes the header which is "question1"-->
+	</div>  <!--close of the division which is basically the top portion of each page-->
+	
+	<div id="content" class="w3-container"> <!--this division will create a space in which we can type our question-->
+	     <p> Do you have a heavy period? <p> <!-- the question that will appear on page six-->
+	</div>
+	<a href="#seven"  onclick="anemiaAdd();" class="w3-btn w3-black"> Yes</a> <!-- provide a button for the page seven to click yes if you have a anemia-->
+	<a href="#seven"  onclick="dehydrationAdd();" class="w3-btn w3-black"> No</a> <!-- provide a button for the page to click No if you have a dehydration-->
+	</div> <!--closing a division-->
+	
+<div class="page" id="seven"> <!-- (opening a divison) deviding a new page(page seven)-->
+    <div id="header" class="w3-container w3-flat-carrot">
+	<h1>Results</h1> <!--header of the seventh page-->
+    </div> <!-- close ofdevision of the page-->
+   
+    <p id="results"> </p>  <!--beginging and end of the paragraph-->
+    <script> //start of Java script//
+    
+    function results() {     //adding function will define the variable javascript will tell HTML to collect the data-->
+    var resultText = document.getElementById("results"); //this will call the result page and create a varaible// 
+    var anemiaPercent = (anemia_count)/ (anemia_count+ dehydration_count) * 100 //adding the math inorder for Java script to calclulate the anemia percent// 
+
+    var dehydrationPercent = (dehydration_count)/ (dehydration_count+ anemia_count) * 100 //adding math in order for Java script to calculate the dehydrationpercent//
+    resultText.innerHTML = "Probability it is anemia =" + anemiaPercent + "%<br> Probability it is a dehydration =" + dehydrationPercent +"%" ;
+//print out a steing of text to combine the numbers mathematically//
+    }
+    
+  
+    </script> <!-- end code in java script-->
+    <a onclick="results();" class="w3-btn w3-black"> show results</a> <!-- create a button for the user to show the result-->
+	
+	   
+   <!-- I used the function on the javascript to tell HTML to display the stored data which is the result part in this assignment.
+here our variable are anemia or dehydration and in order to display the result we need to put it in the math equation which will be the 
+format i put under the function. our function is already given and we can run the data.all the varialbes and functions needs to be 
+defined under the script which i created the new one in here. --> 
+        
+     </div> <!-- end the result page-->
+	
+		
+
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!--this is the opeing of the footer at the end of the page-->
+	<p>DIY!</p> <!--this will display on the footer of each page-->
+</footer> <!--closing th footer-->
+
+	   
+   </body> <!-- closing the whole body in which the header, parapgraph, title and script have been defined-->
